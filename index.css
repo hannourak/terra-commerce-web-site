@@ -1,0 +1,71 @@
+:root {
+  --navy: #0d1b4c;
+  --navy-light: #14275f;
+  --blue: #1a56db;
+  --blue-dark: #1442ad;
+  --yellow: #ffc72c;
+  --paper: #ffffff;
+  --ink: #14141a;
+  --sand: #f0f1f5;
+  --line: #e2e4ea;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; cursor: pointer; border: none; }
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: "Space Grotesk", sans-serif;
+  border: 2px solid transparent;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+
+.btn-primary { background: var(--blue); color: var(--paper); }
+.btn-primary:hover { background: var(--blue-dark); }
+
+.btn-outline { background: var(--paper); color: var(--navy); border-color: var(--navy); }
+.btn-outline:hover { background: var(--navy); color: var(--paper); }
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 6px;
+  width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 1px;
+}
+
+@media (max-width: 640px) { .container { padding: 0 16px; } }
